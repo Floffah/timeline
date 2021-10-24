@@ -28,7 +28,11 @@ export function MainLayout(p: PropsWithChildren<{ top: JSX.Element }>) {
                 ref={resizerRef}
                 draggable={true}
                 onDrag={(e) => {
-                    if (lastDrag + 20 < Date.now()) {
+                    if (
+                        lastDrag + 20 < Date.now() &&
+                        e.pageY > 200 &&
+                        e.pageY < window.innerHeight - 100
+                    ) {
                         lastDrag = Date.now();
                         setTopHeight(e.pageY);
                     }

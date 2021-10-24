@@ -5,7 +5,7 @@
     "devDependencies": {
         "@babel/core": "^7.15.8",
         "@types/node": "^16.11.4",
-        "@types/react": "^17.0.31",
+        "@types/react": "^17.0.32",
         "@types/react-dom": "^17.0.10",
         "@types/tailwindcss": "^2.2.1",
         "@types/twemoji": "^12.1.2",
