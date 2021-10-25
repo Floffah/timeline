@@ -15,7 +15,7 @@ export function MainLayout(p: PropsWithChildren<{ top: JSX.Element }>) {
     return (
         <>
             <div
-                className="w-full fixed top-0 bg-gray-800"
+                className="w-full fixed top-0 bg-gray-800 overflow-hidden"
                 style={{
                     height: topHeight,
                 }}
@@ -39,7 +39,7 @@ export function MainLayout(p: PropsWithChildren<{ top: JSX.Element }>) {
                 }}
             />
             <div
-                className="w-full fixed bottom-0"
+                className="w-full fixed bottom-0 overflow-hidden"
                 style={{
                     height:
                         typeof window === "undefined"

@@ -3,7 +3,6 @@
     "next/babel"
   ],
   "plugins": [
-    "babel-plugin-macros",
     "@vanilla-extract/babel-plugin"
   ]
 }

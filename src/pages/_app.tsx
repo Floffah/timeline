@@ -4,6 +4,7 @@ import { DefaultSeo } from "next-seo";
 import { withTRPC } from "@trpc/next";
 import { AppRouter } from "src/lib/api/trpc/router";
 import "../styles/styles.css";
+import { Provider } from "next-auth/client";
 
 const App: FC<AppProps> = (p) => {
     return (
@@ -30,9 +31,11 @@ export default function BoundariedApp(p: AppProps) {
 
     return (
         <div className="bg-gray-700 fixed top-0 left-0 w-full h-full transition-colors">
-            {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
-            {/* @ts-ignore */}
-            <TRPCApp {...p} />
+            <Provider>
+                {/* eslint-disable-next-line @typescript-eslint/ban-ts-comment */}
+                {/* @ts-ignore */}
+                <TRPCApp {...p} />
+            </Provider>
         </div>
     );
 }
