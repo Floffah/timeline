@@ -19,7 +19,7 @@ const Navbar: FC<{ showBackground?: boolean; className?: string }> = (p) => {
             )}
         >
             <h1
-                className="text-2xl mt-2 ml-5 select-none cursor-pointer"
+                className="text-2xl mt-2 ml-5 select-none cursor-pointer w-fit"
                 onClick={() => router.push("/")}
             >
                 Timeline
