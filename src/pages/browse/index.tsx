@@ -5,8 +5,12 @@ export default function BrowsePage() {
         <>
             <Navbar />
             <div className="ml-8">
-                {/* header kind of */}
+                {/* featured */}
                 <div className="mt-16">
+                    <h1 className="text-2xl font-bold">Featured</h1>
+                </div>
+
+                <div className="mt-5 text-center">
                     <h1 className="text-2xl">
                         Want to create your own timeline?
                     </h1>
@@ -19,12 +23,8 @@ export default function BrowsePage() {
                         >
                             on GitHub
                         </a>
-                        ! A timeline editor is planned
+                        !
                     </p>
-                </div>
-                {/* featured */}
-                <div className="mt-5">
-                    <h1 className="text-2xl font-bold">Featured</h1>
                 </div>
             </div>
         </>
