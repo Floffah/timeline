@@ -7,6 +7,8 @@ generator client {
   provider = "prisma-client-js"
 }
 
+// auth
+
 model Account {
   id                 String    @id @default(cuid())
   userId             String
@@ -54,4 +56,21 @@ model User {
   updatedAt     DateTime  @updatedAt
   accounts      Account[]
   sessions      Session[]
+}
+
+// timelines
+
+model Timeline {
+    id Int @id @default(autoincrement())
+
+    name String
+    description String
+
+    urlType TimelineURLType
+    url String // could be a gist file or /timelines/example.json
+}
+
+enum TimelineURLType {
+    STATIC
+    GIST
 }

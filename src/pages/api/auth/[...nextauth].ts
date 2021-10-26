@@ -3,8 +3,6 @@ import { PrismaAdapter } from "@next-auth/prisma-adapter";
 import { prisma } from "src/lib/api/db";
 import Providers from "next-auth/providers";
 
-require("@prisma/client");
-
 export default NextAuth({
     adapter: PrismaAdapter(prisma),
     providers: [

@@ -19,7 +19,7 @@ a {
 }
 
 a:active {
-    @apply text-blue-600 !important;
+    @apply !text-blue-500;
 }
 
 @layer utilities {
