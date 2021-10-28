@@ -1,4 +1,6 @@
+import { TimelineList } from "src/components/info/TimelineList";
 import { Navbar } from "src/components/nav/Navbar";
+import { builtins } from "src/lib/timelines/all";
 
 export default function BrowsePage() {
     return (
@@ -25,6 +27,7 @@ export default function BrowsePage() {
                 {/* featured */}
                 <div className="mt-5">
                     <h1 className="text-2xl font-bold">Featured</h1>
+                    <TimelineList timelines={builtins}/>
                 </div>
             </div>
         </>
