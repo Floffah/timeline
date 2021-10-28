@@ -10,14 +10,14 @@ export function MainLayout(p: PropsWithChildren<{ top: JSX.Element }>) {
     useEffect(() => {
         if (typeof window !== "undefined" && topHeight === 0)
             setTopHeight(window.innerHeight / 2);
-    });
+    }, [topHeight]);
 
     return (
         <>
             <div
                 className="w-full fixed top-0 bg-gray-800 overflow-hidden"
                 style={{
-                    height: topHeight,
+                    height: topHeight === 0 ? "50%" : topHeight,
                 }}
             >
                 {p.top}

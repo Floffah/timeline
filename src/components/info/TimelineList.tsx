@@ -11,7 +11,7 @@ export const TimelineList: FC<{ timelines: Timeline[] }> = (p) => {
                 <div
                     key={i}
                     className="bg-gray-800 rounded-lg h-24 w-40 overflow-hidden select-none cursor-pointer"
-                    onClick={() => router.push(`/app/${t.name}`)}
+                    onClick={() => router.push(`/viewer/${t.name}`)}
                 >
                     <h1 className="text-center w-full mt-9 h-fit">{t.name}</h1>
                 </div>
