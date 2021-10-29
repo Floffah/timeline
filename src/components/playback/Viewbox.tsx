@@ -18,7 +18,7 @@ export function Viewbox(p: PropsWithChildren<any>) {
                     : 0,
             }}
         >
-            <p>placeholder viewbox</p>
+            {p.children}
         </div>
     );
 }
