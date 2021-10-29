@@ -11,7 +11,7 @@ export default class MyDocument extends Document {
                         rel="stylesheet"
                     />
                     {/*<link href="/fonts/JetBrainsMono.css" rel="stylesheet" />*/}
-                    <link rel="icon" type="image/png" href="/favicon.png" />
+                    {/*<link rel="icon" type="image/png" href="/favicon.png" />*/}
                 </Head>
                 <body>
                     <Main />

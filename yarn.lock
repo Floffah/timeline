@@ -113,10 +113,10 @@ __metadata:
     "@mdi/react": ^1.5.0
     "@next-auth/prisma-adapter": ^0.5.4
     "@prisma/client": ^3.3.0
-    "@trpc/client": ^9.10.2
-    "@trpc/next": ^9.10.2
-    "@trpc/react": ^9.10.2
-    "@trpc/server": ^9.10.2
+    "@trpc/client": ^9.11.0
+    "@trpc/next": ^9.11.0
+    "@trpc/react": ^9.11.0
+    "@trpc/server": ^9.11.0
     "@types/node": ^16.11.6
     "@types/react": ^17.0.33
     "@types/react-dom": ^17.0.10
@@ -141,12 +141,12 @@ __metadata:
     react: ^17.0.2
     react-dom: ^17.0.2
     react-is: ^17.0.2
-    react-query: ^3.29.0
+    react-query: ^3.29.1
     react-use: ^17.3.1
-    tailwindcss: ^2.2.17
+    tailwindcss: ^2.2.19
     twemoji: ^13.1.0
     typescript: ^4.4.4
-    webpack: ^5.60.0
+    webpack: ^5.61.0
     zod: ^3.11.6
   languageName: unknown
   linkType: soft
@@ -594,55 +594,55 @@ __metadata:
   languageName: node
   linkType: hard
 
-"@trpc/client@npm:9.10.2, @trpc/client@npm:^9.10.2":
-  version: 9.10.2
-  resolution: "@trpc/client@npm:9.10.2"
+"@trpc/client@npm:9.11.0, @trpc/client@npm:^9.11.0":
+  version: 9.11.0
+  resolution: "@trpc/client@npm:9.11.0"
   dependencies:
     "@babel/runtime": ^7.9.0
-    "@trpc/server": 9.10.2
-  checksum: aac97a6ffd6ae6a135605751ac5f99a75b581d1c0d5d4c069d50d092a0fb4bd0c6b699a49242b8661d534175616c189e60bd2a291adff8316a66e261f199840c
+    "@trpc/server": 9.11.0
+  checksum: a02a5d6572d00afbfda28f51cfd5e85c150dbe6ada9d56ede263ae36acf437d0d0725802c92e81be23e686c0622044f67c621e48a91e2a3dec561e4a9211d44d
   languageName: node
   linkType: hard
 
-"@trpc/next@npm:^9.10.2":
-  version: 9.10.2
-  resolution: "@trpc/next@npm:9.10.2"
+"@trpc/next@npm:^9.11.0":
+  version: 9.11.0
+  resolution: "@trpc/next@npm:9.11.0"
   dependencies:
     "@babel/runtime": ^7.9.0
-    "@trpc/client": 9.10.2
-    "@trpc/react": 9.10.2
-    "@trpc/server": 9.10.2
+    "@trpc/client": 9.11.0
+    "@trpc/react": 9.11.0
+    "@trpc/server": 9.11.0
     react-ssr-prepass: ^1.4.0
   peerDependencies:
     next: "*"
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
     react-query: ^3.0.0
-  checksum: c249d64e7be8304765c74a41105268ca43b034fdda3beb7603f68d13346386ac1affccf7b7c48eed8b0402259ec5eab31908c40e65555f7a75d41742be6d362e
+  checksum: 27c781c831a716960a37abf12e227446467ca9e56f591c591a48e3b09f4ebd3177616b354322e45baa594e00285ef521aa5f82c4a9263535add43adee0887a19
   languageName: node
   linkType: hard
 
-"@trpc/react@npm:9.10.2, @trpc/react@npm:^9.10.2":
-  version: 9.10.2
-  resolution: "@trpc/react@npm:9.10.2"
+"@trpc/react@npm:9.11.0, @trpc/react@npm:^9.11.0":
+  version: 9.11.0
+  resolution: "@trpc/react@npm:9.11.0"
   dependencies:
     "@babel/runtime": ^7.9.0
-    "@trpc/client": 9.10.2
-    "@trpc/server": 9.10.2
+    "@trpc/client": 9.11.0
+    "@trpc/server": 9.11.0
   peerDependencies:
     react: ">=16.8.0"
     react-dom: ">=16.8.0"
     react-query: ^3.0.0
-  checksum: 5550bf1a9ee8ffd34f70f732c58bfbf684b619c33df6280f76d7b4fcb1f6d0540fc12ad6f0ba228d9ec0d0376670f97c545287e32637ef0ff6f312183f5ff58b
+  checksum: fb89d7e9a921e893f5e0a5b305b05145eb16b590b50b03795189a6e2d15b7718cae7626a60daf9663af05482420bff073cd6a63a33336738b700cb48d69c4b2f
   languageName: node
   linkType: hard
 
-"@trpc/server@npm:9.10.2, @trpc/server@npm:^9.10.2":
-  version: 9.10.2
-  resolution: "@trpc/server@npm:9.10.2"
+"@trpc/server@npm:9.11.0, @trpc/server@npm:^9.11.0":
+  version: 9.11.0
+  resolution: "@trpc/server@npm:9.11.0"
   dependencies:
     tslib: ^2.1.0
-  checksum: b35df5183278f1aecf2c11e31145aa07e1618a9785a384d8fd1008ac044c950c6e777ebd8e061d56ab085651eaa78adac2ebb918740973428d0f13e606de8bd5
+  checksum: 46e6fbb4fa357883a37a38b55a361b1cfc413f3164d1772dee311828a7ba50d6b306080b6f782f1e79178e051a0af27bb2d0e1eed05eef5156203c2e2c5c0a20
   languageName: node
   linkType: hard
 
@@ -6633,9 +6633,9 @@ __metadata:
   languageName: node
   linkType: hard
 
-"react-query@npm:^3.29.0":
-  version: 3.29.0
-  resolution: "react-query@npm:3.29.0"
+"react-query@npm:^3.29.1":
+  version: 3.29.1
+  resolution: "react-query@npm:3.29.1"
   dependencies:
     "@babel/runtime": ^7.5.5
     broadcast-channel: ^3.4.1
@@ -6647,7 +6647,7 @@ __metadata:
       optional: true
     react-native:
       optional: true
-  checksum: f02fc044dbc4eb11f0cd414cb9aa619c5b06650611be461f87f7f57912661c26565afc8b6ee8bc30f08fddef1758b7f16744e64b22923fffe9f8e47bc4c01d5e
+  checksum: cac9c13def201f16a3afd3418595738572a63f7c0eafb8be0e1e18ac5dfb92bf5d8e4e102c41fbbc0399248deabd3aabf27dfd820a83eb2a52fcd1507d0945e1
   languageName: node
   linkType: hard
 
@@ -7682,9 +7682,9 @@ resolve@^2.0.0-next.3:
   languageName: node
   linkType: hard
 
-"tailwindcss@npm:^2.2.17":
-  version: 2.2.17
-  resolution: "tailwindcss@npm:2.2.17"
+"tailwindcss@npm:^2.2.19":
+  version: 2.2.19
+  resolution: "tailwindcss@npm:2.2.19"
   dependencies:
     arg: ^5.0.1
     bytes: ^3.0.0
@@ -7724,7 +7724,7 @@ resolve@^2.0.0-next.3:
   bin:
     tailwind: lib/cli.js
     tailwindcss: lib/cli.js
-  checksum: a0bff1a014f5283676faca321a60c6e97c5512d42f3fe89aae04dffde2b1425c47b7cc3562ee16a9d748fb5cb3a2b8782845c6d8c815de293c4ed6c035b024b0
+  checksum: 660e8086fa2758f273b7ec87067c041185454374c5c916c236f9691b1c60c48166b2556b6327b3d912f018f48712105fa979b7f717b2db3111ea0850059a2b62
   languageName: node
   linkType: hard
 
@@ -8329,9 +8329,9 @@ typescript@^4.4.4:
   languageName: node
   linkType: hard
 
-"webpack@npm:^5.60.0":
-  version: 5.60.0
-  resolution: "webpack@npm:5.60.0"
+"webpack@npm:^5.61.0":
+  version: 5.61.0
+  resolution: "webpack@npm:5.61.0"
   dependencies:
     "@types/eslint-scope": ^3.7.0
     "@types/estree": ^0.0.50
@@ -8362,7 +8362,7 @@ typescript@^4.4.4:
       optional: true
   bin:
     webpack: bin/webpack.js
-  checksum: 3c37424516cfb3c7c9cefc888b359b945913f801059fb7c496380b06830666116f71f394eac135e1721b6802ff846ffa73378d3c05a9e03e3c2890a6bfa5bba1
+  checksum: 442958ec48645c9e612a2628a815c411cbc18289b5cc7b3d1b5d0f8e5b41606ed225decf4f3684edc365e6390867bded244d20387c70fbb630c0ac08443c34c8
   languageName: node
   linkType: hard
 

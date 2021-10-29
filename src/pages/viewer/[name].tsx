@@ -5,6 +5,9 @@ import { Button } from "src/components/input/Button";
 import { useRouter } from "next/router";
 import { Navbar } from "src/components/nav/Navbar";
 import { MainLayout } from "src/components/layout/MainLayout";
+import { useRef } from "react";
+import { useAtom } from "jotai";
+import { topHeightAtom } from "src/lib/state/layout";
 
 export default function ViewerPage(
     p:
@@ -14,6 +17,8 @@ export default function ViewerPage(
         | { notFound: string },
 ) {
     const router = useRouter();
+    const viewboxref = useRef<HTMLDivElement>(null);
+    useAtom(topHeightAtom);
 
     if ("notFound" in p) {
         return (
@@ -36,8 +41,25 @@ export default function ViewerPage(
     }
 
     return (
-        <MainLayout top={<p>placeholder top</p>}>
-            <p>placeholder content</p>
+        <MainLayout
+            top={
+                <div
+                    className="bg-gray-950 h-full relative m-auto overflow-hidden"
+                    ref={viewboxref}
+                    style={{
+                        width: viewboxref.current
+                            ? (viewboxref.current.getBoundingClientRect()
+                                  .height /
+                                  9) *
+                              16
+                            : 0,
+                    }}
+                >
+                    <p>placeholder viewbox</p>
+                </div>
+            }
+        >
+            <p>placeholder bottom</p>
         </MainLayout>
     );
 }
