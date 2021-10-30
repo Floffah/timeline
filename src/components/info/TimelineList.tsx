@@ -6,7 +6,7 @@ export const TimelineList: FC<{ timelines: Timeline[] }> = (p) => {
     const router = useRouter();
 
     return (
-        <div className="h-40">
+        <div className="h-24 overflow-y-hidden overflow-x-auto">
             {p.timelines.map((t, i) => (
                 <div
                     key={i}

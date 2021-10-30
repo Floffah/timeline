@@ -111,6 +111,7 @@ __metadata:
   dependencies:
     "@mdi/js": ^6.4.95
     "@mdi/react": ^1.5.0
+    "@n1ru4l/use-async-effect": ^1.4.0
     "@next-auth/prisma-adapter": ^0.5.4
     "@prisma/client": ^3.3.0
     "@trpc/client": ^9.11.0
@@ -126,7 +127,7 @@ __metadata:
     "@typescript-eslint/parser": ^5.2.0
     autoprefixer: ^10.4.0
     axios: ^0.24.0
-    eslint: 7.x
+    eslint: ~7.x
     eslint-config-next: ^12.0.1
     eslint-config-prettier: ^8.3.0
     jotai: ^1.4.2
@@ -213,6 +214,15 @@ __metadata:
   version: 1.5.0
   resolution: "@mdi/react@npm:1.5.0"
   checksum: bf79b881cd87611179b02e004f1a4155f9bee0ccbc465b18da13a6387bc08a3fa42f8686c9d9678a27ad74016ab0c3a6779ba4d86416f9fb0048e980f2d0a6e2
+  languageName: node
+  linkType: hard
+
+"@n1ru4l/use-async-effect@npm:^1.4.0":
+  version: 1.4.0
+  resolution: "@n1ru4l/use-async-effect@npm:1.4.0"
+  peerDependencies:
+    react: ^16.8.6 || 17.x
+  checksum: bf2f4afb248aec0238f13a57c9285b2951a72b5a40a41248277fdc976de68dc9f596cf7caad56f2b625ad30439f62a55c2d094e565f6fb93d176f51008584dad
   languageName: node
   linkType: hard
 
@@ -3110,7 +3120,7 @@ __metadata:
   languageName: node
   linkType: hard
 
-"eslint@npm:7.x":
+"eslint@npm:~7.x":
   version: 7.32.0
   resolution: "eslint@npm:7.32.0"
   dependencies:

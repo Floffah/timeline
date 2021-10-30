@@ -4,8 +4,7 @@ import { builtins } from "src/lib/timelines/all";
 import { Button } from "src/components/input/Button";
 import { useRouter } from "next/router";
 import { Navbar } from "src/components/nav/Navbar";
-import { MainLayout } from "src/components/layout/MainLayout";
-import { Viewbox } from "src/components/playback/Viewbox";
+import { Viewer } from "src/components/playback/viewer/Viewer";
 
 export default function ViewerPage(
     p:
@@ -36,17 +35,7 @@ export default function ViewerPage(
         );
     }
 
-    return (
-        <MainLayout
-            top={
-                <Viewbox>
-                    <p>placeholder viewbox</p>
-                </Viewbox>
-            }
-        >
-            <p>placeholder bottom</p>
-        </MainLayout>
-    );
+    return <Viewer timeline={p.timeline} />;
 }
 
 export const getStaticProps: GetStaticProps<

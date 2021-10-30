@@ -6,12 +6,13 @@ export default function ViewerLoaderPage() {
     const router = useRouter();
 
     useEffect(() => {
-        console.log(router.query);
-        if (!router.query || !router.query.name) router.push("/browse");
         router
             .prefetch("/viewer/[name]", `/viewer/${router.query.name}`)
             .then(() =>
-                router.push("/viewer/[name]", `/viewer/${router.query.name}`),
+                router.replace(
+                    "/viewer/[name]",
+                    `/viewer/${router.query.name}`,
+                ),
             );
     });
 
@@ -23,8 +24,6 @@ export default function ViewerLoaderPage() {
                     <div className="h-9 w-40 mt-3 animate-pulse bg-gray-600 rounded-md" />
                 </div>
             }
-        >
-            <div className="w-full h-full bg-gray-600 animate-pulse" />
-        </MainLayout>
+        />
     );
 }
