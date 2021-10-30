@@ -10,7 +10,7 @@ export function MainLayout(p: PropsWithChildren<{ top: JSX.Element }>) {
     useEffect(() => {
         if (typeof window !== "undefined" && topHeight === 0)
             setTopHeight(window.innerHeight / 2);
-    }, [topHeight]);
+    }, [setTopHeight, topHeight]);
 
     return (
         <>

@@ -1,11 +1,19 @@
-import { PropsWithChildren, useRef } from "react";
+import { PropsWithChildren, useEffect, useRef, useState } from "react";
 import { useAtom } from "jotai";
 import { topHeightAtom } from "src/lib/state/layout";
 
-// a component which returns a div whos height is 100% of the container but the width is 16:9 ratio to the height which is calculated using the useRef hook
 export function Viewbox(p: PropsWithChildren<any>) {
     const viewboxref = useRef<HTMLDivElement>(null);
+    const [rerenders, setRerenders] = useState(0);
     useAtom(topHeightAtom);
+
+    useEffect(() => {
+        if (
+            viewboxref.current &&
+            viewboxref.current.getBoundingClientRect().width === 0
+        )
+            setRerenders(rerenders + 1);
+    }, [rerenders, viewboxref]);
 
     return (
         <div
