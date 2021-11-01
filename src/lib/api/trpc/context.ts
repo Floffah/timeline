@@ -1,12 +1,12 @@
 import { CreateNextContextOptions } from "@trpc/server/adapters/next";
 import { prisma } from "../db";
 import { inferAsyncReturnType, router } from "@trpc/server";
-import { getSession } from "next-auth/client";
+// import { getSession } from "next-auth/client";
 
-export async function createContext(ctx: CreateNextContextOptions) {
-    const session = await getSession({ req: ctx.req });
+export async function createContext(_ctx: CreateNextContextOptions) {
+    // const session = await getSession({ req: ctx.req });
 
-    return { prisma, session };
+    return { prisma, /*session*/ };
 }
 
 export type ContextType = inferAsyncReturnType<typeof createContext>;
