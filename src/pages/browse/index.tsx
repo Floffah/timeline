@@ -27,7 +27,7 @@ export default function BrowsePage() {
                 {/* featured */}
                 <div className="mt-5">
                     <h1 className="text-2xl font-bold">Featured</h1>
-                    <TimelineList timelines={builtins}/>
+                    <TimelineList timelines={builtins} />
                 </div>
             </div>
         </>

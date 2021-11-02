@@ -3,7 +3,7 @@ export interface Timeline {
     description: string;
     meta: {
         author: string;
-    }
+    };
     sources: TimelineSource[];
     elements: TimelineElement[];
 } // will do stuff soon

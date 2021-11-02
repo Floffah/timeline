@@ -4,8 +4,8 @@ export const testTimeline: Timeline = {
     name: "Test Timeline",
     description: "A test timline for testing the website",
     meta: {
-        author: "Floffah"
+        author: "Floffah",
     },
     elements: [],
     sources: [],
-}
+};

@@ -26,16 +26,18 @@ const Navbar: FC<{ showBackground?: boolean; className?: string }> = (p) => {
             </h1>
             <div className="absolute right-0 top-0 inline-block">
                 {/*{!session && (*/}
-                    <h1
-                        className="inline-block text-gray-300 text-lg mr-3 mt-2.5 cursor-pointer select-none"
-                        onClick={() => {
-                            // signIn("discord");
-                            // setIsSigningIn(true);
-                            alert("Sign in disabled until next-auth supports react 18 + nextjs 12 (when v4 releases)")
-                        }}
-                    >
-                        Sign in
-                    </h1>
+                <h1
+                    className="inline-block text-gray-300 text-lg mr-3 mt-2.5 cursor-pointer select-none"
+                    onClick={() => {
+                        // signIn("discord");
+                        // setIsSigningIn(true);
+                        alert(
+                            "Sign in disabled until next-auth supports react 18 + nextjs 12 (when v4 releases)",
+                        );
+                    }}
+                >
+                    Sign in
+                </h1>
                 {/* )} */}
                 {/*{(isLoading || isSigningIn) && (*/}
                 {/*    <Icon*/}

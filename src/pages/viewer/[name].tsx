@@ -5,17 +5,19 @@ import { Button } from "src/components/input/Button";
 import { useRouter } from "next/router";
 import { Navbar } from "src/components/nav/Navbar";
 import { Viewer } from "src/components/playback/viewer/Viewer";
+import { TimelineContext } from "src/lib/util/context";
 
 export default function ViewerPage(
     p:
         | {
               timeline: Timeline;
+              notFound?: undefined;
           }
-        | { notFound: string },
+        | { notFound: string; timeline?: undefined },
 ) {
     const router = useRouter();
 
-    if ("notFound" in p) {
+    if ("notFound" in p || !p.timeline) {
         return (
             <>
                 <Navbar showBackground={true} />
@@ -35,7 +37,11 @@ export default function ViewerPage(
         );
     }
 
-    return <Viewer timeline={p.timeline} />;
+    return (
+        <TimelineContext.Provider value={p.timeline}>
+            <Viewer />
+        </TimelineContext.Provider>
+    );
 }
 
 export const getStaticProps: GetStaticProps<
@@ -46,7 +52,9 @@ export const getStaticProps: GetStaticProps<
 
     let timeline: Timeline | undefined = undefined;
 
-    const builtin = builtins.find((t) => p.params ? t.name === p.params.name : false);
+    const builtin = builtins.find((t) =>
+        p.params ? t.name === p.params.name : false,
+    );
     if (builtin) timeline = builtin;
 
     // more soon

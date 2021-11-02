@@ -3,6 +3,7 @@ import { useAtom } from "jotai";
 import { topHeightAtom } from "src/lib/state/layout";
 
 let lastDrag = Date.now();
+
 export function MainLayout(p: PropsWithChildren<{ top: JSX.Element }>) {
     const [topHeight, setTopHeight] = useAtom(topHeightAtom);
     const resizerRef = useRef<HTMLDivElement>(null);
