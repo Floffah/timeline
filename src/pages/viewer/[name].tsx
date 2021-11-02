@@ -46,7 +46,7 @@ export const getStaticProps: GetStaticProps<
 
     let timeline: Timeline | undefined = undefined;
 
-    const builtin = builtins.find((t) => t.name === p.params?.name);
+    const builtin = builtins.find((t) => p.params ? t.name === p.params.name : false);
     if (builtin) timeline = builtin;
 
     // more soon
