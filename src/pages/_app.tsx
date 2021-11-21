@@ -4,6 +4,9 @@ import { withTRPC } from "@trpc/next";
 import { AppRouter } from "src/lib/api/trpc/router";
 import "../styles/styles.css";
 import { Provider } from "next-auth/client";
+import getConfig from "next/config";
+
+const config = getConfig();
 
 function App(p: AppProps) {
     return (
@@ -22,11 +25,8 @@ function App(p: AppProps) {
 export default withTRPC<AppRouter>({
     config: (_c) => {
         return {
-            url:
-                process.env.NODE_ENV === "production"
-                    ? "https://timeline.floffah.dev/api/trpc"
-                    : "http://localhost:3000/api/trpc"
-        }
+            url: config.publicRuntimeConfig.apiUrl,
+        };
     },
     ssr: false,
 })(App);
